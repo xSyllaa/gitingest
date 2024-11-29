@@ -4,9 +4,6 @@
 Turn any GitHub repository into a prompt-friendly text digest for LLMs. 
 
 
-
-Built using [codebase-digest](https://github.com/kamilstanuch/codebase-digest)
-
 ## 🚀 Features
 
 - **One-Click Analysis**: Simply paste a GitHub repository URL and get instant results
@@ -20,11 +17,8 @@ Built using [codebase-digest](https://github.com/kamilstanuch/codebase-digest)
 ## 🛠️ Tech Stack
 
 - FastAPI - Backend framework
-- Uvicorn - ASGI server
-- Jinja2 - Template engine
-- Tailwind CSS - Styling
-- codebase-digest - Core analysis engine
-- API Analytics - Usage tracking
+- [codebase-digest](https://github.com/kamilstanuch/codebase-digest) - Core analysis engine
+- [apianalytics.dev]([https://github.com/kamilstanuch/codebase-digest](https://www.apianalytics.dev/)) - Usage tracking
 
 ## 📦 Installation
 
@@ -83,4 +77,5 @@ For feature suggestions, please open an issue first to discuss what you would li
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
+
 

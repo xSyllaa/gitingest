@@ -2,7 +2,7 @@
 # GitDigest 🔍
 
 Turn any GitHub repository into a prompt-friendly text digest for LLMs. 
-
+[Live demo](https://gitdigest.dev/)
 
 ## 🚀 Features
 
@@ -18,7 +18,7 @@ Turn any GitHub repository into a prompt-friendly text digest for LLMs.
 
 - FastAPI - Backend framework
 - [codebase-digest](https://github.com/kamilstanuch/codebase-digest) - Core analysis engine
-- [apianalytics.dev]([https://github.com/kamilstanuch/codebase-digest](https://www.apianalytics.dev/)) - Usage tracking
+- [apianalytics.dev](https://www.apianalytics.dev/) - Usage tracking
 
 ## 📦 Installation
 

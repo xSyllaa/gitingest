@@ -2,6 +2,7 @@
 # GitDigest 🔍
 
 Turn any GitHub repository into a prompt-friendly text digest for LLMs. 
+
 [Live demo](https://gitdigest.dev/)
 
 ## 🚀 Features

@@ -52,30 +52,8 @@ The application will be available at `http://localhost:8000`
 
 
 ## 🔒 WIP
-
+- Feedback/suggestions: Please open a github Issue or mail me: romain@coderamp.io
 - Repository cloning is limited to GitHub repositories only
 - Processing timeouts are implemented (10s for cloning, 15s for processing)
-- Temporary files are automatically cleaned up after processing
 - Request size limits are in place to prevent abuse
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request
-
-For feature suggestions, please open an issue first to discuss what you would like to add.
-
-## 📫 Contact
-
-- Email: romain@coderamp.io
-- Bluesky: @rom2 (@yasbaltrine.bsky.social)
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 

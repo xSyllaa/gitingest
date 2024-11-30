@@ -18,7 +18,6 @@ Turn any GitHub repository into a prompt-friendly text digest for LLMs.
 ## 🛠️ Tech Stack
 
 - FastAPI - Backend framework
-- [codebase-digest](https://github.com/kamilstanuch/codebase-digest) - Core analysis engine
 - [apianalytics.dev](https://www.apianalytics.dev/) - Usage tracking
 
 ## 📦 Installation

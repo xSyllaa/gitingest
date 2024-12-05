@@ -1,9 +1,9 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 # GitDigest 🔍
 
-Turn any GitHub repository into a prompt-friendly text digest for LLMs. 
+Turn any GitHub repository into a prompt-friendly text ingest for LLMs. 
 
-[Live demo](https://gitdigest.dev/)
+[Live demo](https://gitingest.com/)
 
 ## 🚀 Features
 
@@ -24,8 +24,8 @@ Turn any GitHub repository into a prompt-friendly text digest for LLMs.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/gitdigest.git
-cd gitdigest
+git clone https://github.com/yourusername/gitingest.git
+cd gitingest
 ```
 
 2. Install dependencies:

@@ -1,5 +1,5 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-# GitDigest 🔍
+# GitIngest 🔍
 
 Turn any GitHub repository into a prompt-friendly text ingest for LLMs. 
 

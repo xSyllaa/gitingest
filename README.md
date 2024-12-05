@@ -33,16 +33,7 @@ cd gitingest
 pip install -r requirements.txt
 ```
 
-3. Set up environment variables:
-```bash
-# Create .env file
-touch .env
-
-# Add your API analytics key
-echo "API_ANALYTICS_KEY=your_key_here" >> .env
-```
-
-4. Run the application:
+3. Run the application:
 ```bash
 cd src
 uvicorn main:app --reload

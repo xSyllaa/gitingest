@@ -1,22 +1,23 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 # GitIngest 🔍
 
-Turn any GitHub repository into a prompt-friendly text ingest for LLMs. 
+Turn any GitHub repository into a prompt-friendly text ingest for LLMs.
 
-[Live demo](https://gitingest.com/)
+[gitingest.com](https://gitingest.com/)
+You can also replace `hub` with `ingest` in any github url to access the coresponding digest
 
 ## 🚀 Features
 
-- **One-Click Analysis**: Simply paste a GitHub repository URL and get instant results
+- **One-Click Analysis**: Simply paste a GitHub repository URL and get instant pastable context
 - **Smart Formatting**: Optimized output format for LLM prompts
 - **Statistics about**: :
   - File and directory structure
-  - Token counts and statistics
-  - Repository summary
-- **Web Interface**: Clean, responsive UI built with Tailwind CSS
+  - Size of the extract
+  - (soon) Token count  
+- **Web Interface**: Lightweight responsive UI
 
 ## 🛠️ Tech Stack
-
+- Tailwind CSS
 - FastAPI - Backend framework
 - [apianalytics.dev](https://www.apianalytics.dev/) - Usage tracking
 
@@ -41,10 +42,11 @@ uvicorn main:app --reload
 
 The application will be available at `http://localhost:8000`
 
+## ✔️ Contributions are welcome!
+Create a pull request or open an Issue about anything you'd like to see in gitingest
 
 ## 🔒 WIP
 - Feedback/suggestions: Please open a github Issue or mail me: romain@coderamp.io
-- Repository cloning is limited to GitHub repositories only
-- Processing timeouts are implemented (10s for cloning, 15s for processing)
-- Request size limits are in place to prevent abuse
+- Repository cloning is limited to public GitHub repositories only
+- Too big repos will probably timeout (if longer than 20 secondes to clone)
 

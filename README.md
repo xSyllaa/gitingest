@@ -1,10 +1,10 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 # GitIngest 🔍
 
-Turn any GitHub repository into a prompt-friendly text ingest for LLMs.
-![Image](./docs/frontpage.png)
-[gitingest.com](https://gitingest.com/)
 
+[![Image](./docs/frontpage.png)](https://gitingest.com/)
+
+[gitingest.com](https://gitingest.com/) - Turn any GitHub repository into a prompt-friendly text ingest for LLMs.
 You can also replace `hub` with `ingest` in any github url to access the coresponding digest
 
 ## 🚀 Features

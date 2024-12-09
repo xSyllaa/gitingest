@@ -2,7 +2,7 @@
 # GitIngest 🔍
 
 Turn any GitHub repository into a prompt-friendly text ingest for LLMs.
-
+![Image](./docs/frontpage.png)
 [gitingest.com](https://gitingest.com/)
 
 You can also replace `hub` with `ingest` in any github url to access the coresponding digest

@@ -16,4 +16,6 @@ RUN chown -R appuser:appuser /app
 # Switch to non-root user
 USER appuser
 
-CMD ["uvicorn", "main:app", "--reload"]
+EXPOSE 8000
+
+CMD ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0"]

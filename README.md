@@ -18,7 +18,7 @@ You can also replace `hub` with `ingest` in any github url to access the corespo
   - File and directory structure
   - Size of the extract
   - Token count  
-- **CLI tool**: Run it as a command
+- **CLI tool**: Run it as a command (Currently on Linux only)
 - **Python package**: Import it in your code
 
 

@@ -1,5 +1,7 @@
 # GitIngest
 
+[![Image](./docs/frontpage.png "GitIngest main page")](https://gitingest.com)
+
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/cyclotruc/gitingest/blob/main/LICENSE)
 [![PyPI version](https://badge.fury.io/py/gitingest.svg)](https://badge.fury.io/py/gitingest)
 [![Downloads](https://pepy.tech/badge/gitingest)](https://pepy.tech/project/gitingest)
@@ -7,7 +9,6 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Discord](https://dcbadge.limes.pink/api/server/https://discord.com/invite/zerRaGK9EC)](https://discord.com/invite/zerRaGK9EC)
 
-[![Image](./docs/frontpage.png "GitIngest main page")](https://gitingest.com)
 
 Turn any Git repository into a prompt-friendly text ingest for LLMs.
 

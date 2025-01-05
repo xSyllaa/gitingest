@@ -17,8 +17,6 @@ You can also replace `hub` with `ingest` in any GitHub URL to access the corespo
 
 [gitingest.com](https://gitingest.com/) · [Chrome Extension](https://chromewebstore.google.com/detail/adfjahbijlkjfoicpjkhjicpjpjfaood) · [Firefox Add-on](https://addons.mozilla.org/firefox/addon/gitingest/)
 
-
-
 ## 🚀 Features
 
 - **Easy code context**: Get a text digest from a git repository URL or a directory
@@ -38,16 +36,17 @@ pip install gitingest
 
 ## 🧩 Browser Extension Usage
 
+<!-- markdownlint-disable MD033 -->
 <a href="https://chromewebstore.google.com/detail/adfjahbijlkjfoicpjkhjicpjpjfaood" target="_blank" title="Get GitIngest Extension from Chrome Web Store"><img height="48" src="https://github.com/user-attachments/assets/20a6e44b-fd46-4e6c-8ea6-aad436035753" alt="Available in the Chrome Web Store" /></a>
 <a href="https://addons.mozilla.org/firefox/addon/gitingest/" target="_blank" title="Get GitIngest Extension from Firefox Add-ons"><img height="48" src="https://github.com/user-attachments/assets/c0e99e6b-97cf-4af2-9737-099db7d3538b" alt="Get The Add-on for Firefox" /></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/nfobhllgcekbmpifkjlopfdfdmljmipf" target="_blank" title="Get GitIngest Extension from Firefox Add-ons"><img height="48" src="https://github.com/user-attachments/assets/204157eb-4cae-4c0e-b2cb-db514419fd9e" alt="Get from the Edge Add-ons" /></a>
+<!-- markdownlint-enable MD033 -->
 
-The extension is open source at [lcandy2/gitingest-extension](https://github.com/lcandy2/gitingest-extension).  
-For anyone who wants install it manually, you may download it [here](https://github.com/lcandy2/gitingest-extension/releases).  
+The extension is open source at [lcandy2/gitingest-extension](https://github.com/lcandy2/gitingest-extension).
+For anyone who wants install it manually, you may download it [here](https://github.com/lcandy2/gitingest-extension/releases).
 Issues and feature requests are welcome to the repo.
 
 ## 💡 Command line usage
-
 
 The `gitingest` command line tool allows you to analyze codebases and create a text dump of their contents.
 

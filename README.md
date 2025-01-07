@@ -6,8 +6,6 @@
 [![PyPI version](https://badge.fury.io/py/gitingest.svg)](https://badge.fury.io/py/gitingest)
 [![GitHub stars](https://img.shields.io/github/stars/cyclotruc/gitingest?style=social.svg)](https://github.com/cyclotruc/gitingest)
 [![Downloads](https://pepy.tech/badge/gitingest)](https://pepy.tech/project/gitingest)
-[![GitHub issues](https://img.shields.io/github/issues/cyclotruc/gitingest)](https://github.com/cyclotruc/gitingest/issues)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 [![Discord](https://dcbadge.limes.pink/api/server/https://discord.com/invite/zerRaGK9EC)](https://discord.com/invite/zerRaGK9EC)
 
@@ -43,7 +41,6 @@ pip install gitingest
 <!-- markdownlint-enable MD033 -->
 
 The extension is open source at [lcandy2/gitingest-extension](https://github.com/lcandy2/gitingest-extension).
-For anyone who wants install it manually, you may download it [here](https://github.com/lcandy2/gitingest-extension/releases).
 Issues and feature requests are welcome to the repo.
 
 ## 💡 Command line usage
@@ -106,6 +103,10 @@ If you are hosting it on a domain, you can specify the allowed hostnames via env
 - [Jinja2](https://jinja.palletsprojects.com/) - HTML templating
 - [tiktoken](https://github.com/openai/tiktoken) - Token estimation
 - [apianalytics.dev](https://www.apianalytics.dev/) - Simple Analytics
+
+###  Looking for a javascript/node package?
+
+Check out the NPM alternative 📦 Repomix: https://github.com/yamadashy/repomix
 
 ## ✔️ Contributing to Gitingest
 
@@ -175,3 +176,4 @@ The application should be available at `http://localhost:8000`
    ```bash
    gitingest --help
    ```
+

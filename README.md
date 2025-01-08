@@ -104,9 +104,9 @@ If you are hosting it on a domain, you can specify the allowed hostnames via env
 - [tiktoken](https://github.com/openai/tiktoken) - Token estimation
 - [apianalytics.dev](https://www.apianalytics.dev/) - Simple Analytics
 
-###  Looking for a javascript/node package?
+### Looking for a javascript/node package?
 
-Check out the NPM alternative 📦 Repomix: https://github.com/yamadashy/repomix
+Check out the NPM alternative 📦 Repomix: <https://github.com/yamadashy/repomix>
 
 ## ✔️ Contributing to Gitingest
 
@@ -176,4 +176,3 @@ The application should be available at `http://localhost:8000`
    ```bash
    gitingest --help
    ```
-

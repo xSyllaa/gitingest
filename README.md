@@ -23,7 +23,7 @@ You can also replace `hub` with `ingest` in any GitHub URL to access the corespo
   - File and directory structure
   - Size of the extract
   - Token count
-- **CLI tool**: Run it as a shell command (currently on Linux only)
+- **CLI tool**: Run it as a shell command
 - **Python package**: Import it in your code
 
 ## 📦 Installation
@@ -122,7 +122,7 @@ Gitingest aims to be friendly for first time contributors, with a simple python 
 - [FastAPI](https://github.com/fastapi/fastapi) - Backend framework
 - [Jinja2](https://jinja.palletsprojects.com) - HTML templating
 - [tiktoken](https://github.com/openai/tiktoken) - Token estimation
-- [apianalytics.dev](https://www.apianalytics.dev) - Simple Analytics
+- [posthog](https://github.com/PostHog/posthog) - Amazing analytics
 
 ### Looking for a JavaScript/Node package?
 

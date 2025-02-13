@@ -64,12 +64,19 @@ This will write the digest in a text file (default `digest.txt`) in your current
 ## 🐛 Python package usage
 
 ```python
+# Synchronous usage
 from gitingest import ingest
 
 summary, tree, content = ingest("path/to/directory")
 
 # or from URL
 summary, tree, content = ingest("https://github.com/cyclotruc/gitingest")
+
+# Asynchronous usage
+from gitingest import ingest_async
+import asyncio
+
+result = asyncio.run(ingest_async("path/to/directory"))
 ```
 
 By default, this won't write a file but can be enabled with the `output` argument.

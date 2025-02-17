@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Optional, Tuple
 
+from gitingest.query_parser import ParsedQuery
 from gitingest.utils import async_timeout
 
 TIMEOUT: int = 60
@@ -110,6 +111,42 @@ async def clone_repo(config: CloneConfig) -> Tuple[bytes, bytes]:
     # Scenario 3: Clone the default branch with shallow depth
     clone_cmd += ["--depth=1", "--single-branch", url, local_path]
     return await _run_git_command(*clone_cmd)
+
+
+async def partial_clone_repo(parsed_query: ParsedQuery) -> None:
+    """
+    Perform a partial clone of a Git repository based on the provided query parameters.
+
+    Parameters
+    ----------
+    parsed_query : ParsedQuery
+        A ParsedQuery object containing the URL, local path, and optional subpath and repo_name.
+
+    Raises
+    ------
+    ValueError
+        If the 'repo_name' parameter is missing.
+    """
+    partial_clone_cmd = [
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "--sparse",
+        parsed_query.url,
+        parsed_query.local_path,
+    ]
+    await _run_git_command(*partial_clone_cmd)
+
+    if not parsed_query.repo_name:
+        raise ValueError("The 'repo_name' parameter is required.")
+
+    sparse_checkout_cmd = [
+        "git",
+        "sparse-checkout",
+        "set",
+        parsed_query.subpath.lstrip("/"),
+    ]
+    await _run_git_command(*sparse_checkout_cmd, cwd=str(parsed_query.local_path))
 
 
 async def _check_repo_exists(url: str) -> bool:

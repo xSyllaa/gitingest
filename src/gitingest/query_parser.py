@@ -35,11 +35,11 @@ class ParsedQuery:  # pylint: disable=too-many-instance-attributes
 
     user_name: Optional[str]
     repo_name: Optional[str]
-    subpath: str
     local_path: Path
     url: Optional[str]
     slug: str
     id: str
+    subpath: str = "/"
     type: Optional[str] = None
     branch: Optional[str] = None
     commit: Optional[str] = None
@@ -171,7 +171,6 @@ async def _parse_repo_source(source: str) -> ParsedQuery:
         user_name=user_name,
         repo_name=repo_name,
         url=url,
-        subpath="/",
         local_path=local_path,
         slug=slug,
         id=_id,
@@ -363,7 +362,6 @@ def _parse_path(path_str: str) -> ParsedQuery:
         user_name=None,
         repo_name=None,
         url=None,
-        subpath="/",
         local_path=path_obj,
         slug=f"{path_obj.parent.name}/{path_obj.name}",
         id=str(uuid.uuid4()),

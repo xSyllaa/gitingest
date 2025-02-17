@@ -90,11 +90,13 @@ async def clone_repo(config: CloneConfig) -> Tuple[bytes, bytes]:
     if not await _check_repo_exists(url):
         raise ValueError("Repository not found, make sure it is public")
 
+    clone_cmd = ["git", "clone", "--recurse-submodules"]
+
     if commit:
         # Scenario 1: Clone and checkout a specific commit
         # Clone the repository without depth to ensure full history for checkout
-        clone_cmd = ["git", "clone", "--recurse-submodules", "--single-branch", url, local_path]
-        await _run_git_command(*clone_cmd)
+        clone_commit_cmd = clone_cmd + ["--single-branch", url, local_path]
+        await _run_git_command(*clone_commit_cmd)
 
         # Checkout the specific commit
         checkout_cmd = ["git", "-C", local_path, "checkout", commit]
@@ -102,21 +104,11 @@ async def clone_repo(config: CloneConfig) -> Tuple[bytes, bytes]:
 
     if branch and branch.lower() not in ("main", "master"):
         # Scenario 2: Clone a specific branch with shallow depth
-        clone_cmd = [
-            "git",
-            "clone",
-            "--recurse-submodules",
-            "--depth=1",
-            "--single-branch",
-            "--branch",
-            branch,
-            url,
-            local_path,
-        ]
-        return await _run_git_command(*clone_cmd)
+        branch_cmd = clone_cmd + ["--depth=1", "--single-branch", "--branch", branch, url, local_path]
+        return await _run_git_command(*branch_cmd)
 
     # Scenario 3: Clone the default branch with shallow depth
-    clone_cmd = ["git", "clone", "--recurse-submodules", "--depth=1", "--single-branch", url, local_path]
+    clone_cmd += ["--depth=1", "--single-branch", url, local_path]
     return await _run_git_command(*clone_cmd)
 
 
@@ -186,7 +178,7 @@ async def fetch_remote_branch_list(url: str) -> List[str]:
     ]
 
 
-async def _run_git_command(*args: str) -> Tuple[bytes, bytes]:
+async def _run_git_command(*args: str, cwd: Optional[str] = None) -> Tuple[bytes, bytes]:
     """
     Execute a Git command asynchronously and captures its output.
 
@@ -194,6 +186,8 @@ async def _run_git_command(*args: str) -> Tuple[bytes, bytes]:
     ----------
     *args : str
         The Git command and its arguments to execute.
+    cwd : str, optional
+        The current working directory where the Git command should be executed.
 
     Returns
     -------
@@ -225,6 +219,7 @@ async def _run_git_command(*args: str) -> Tuple[bytes, bytes]:
         *args,
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE,
+        cwd=cwd,
     )
     stdout, stderr = await proc.communicate()
     if proc.returncode != 0:

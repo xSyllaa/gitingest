@@ -13,7 +13,7 @@ from urllib.parse import unquote, urlparse
 from gitingest.config import MAX_FILE_SIZE, TMP_BASE_PATH
 from gitingest.exceptions import InvalidPatternError
 from gitingest.ignore_patterns import DEFAULT_IGNORE_PATTERNS
-from gitingest.repository_clone import _check_repo_exists, fetch_remote_branch_list
+from gitingest.repository_clone import CloneConfig, _check_repo_exists, fetch_remote_branch_list
 
 HEX_DIGITS: Set[str] = set(string.hexdigits)
 
@@ -47,6 +47,30 @@ class ParsedQuery:  # pylint: disable=too-many-instance-attributes
     ignore_patterns: Optional[Set[str]] = None
     include_patterns: Optional[Set[str]] = None
     pattern_type: Optional[str] = None
+
+    def extact_clone_config(self) -> CloneConfig:
+        """
+        Extract the relevant fields for the CloneConfig object.
+
+        Returns
+        -------
+        CloneConfig
+            A CloneConfig object containing the relevant fields.
+
+        Raises
+        ------
+        ValueError
+            If the 'url' parameter is not provided.
+        """
+        if not self.url:
+            raise ValueError("The 'url' parameter is required.")
+
+        return CloneConfig(
+            url=self.url,
+            local_path=str(self.local_path),
+            commit=self.commit,
+            branch=self.branch,
+        )
 
 
 async def parse_query(
